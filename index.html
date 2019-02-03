@@ -1,0 +1,121 @@
+<!--
+
+Created by Sublime Text 3.
+Author: Senchong <1282106816@qq.com>
+Data: 2019/2/3
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成绩查询 | 学号登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="广西科技大学成绩查询">
+    <meta name="author" content="Senchong">
+    <link rel="stylesheet" href="css/mark.css">
+    <style>
+        .alert{
+            width: 100%;
+            line-height: 70px;
+            background: linear-gradient(-90deg, #9b494d, #bf5853);
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+			border: 1px solid transparent;
+			box-sizing: border-box;
+			border-radius: 0 0 3px 3px;
+            box-shadow: 0 0 20px #733544;
+            transition: all .5s;
+            position: absolute;
+            top: 0;
+            z-index: 999;
+        }
+        #load-dh {
+        	background-color: rgba(0,0,0,0.7); 
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+			width: 100%; 
+			height: 100%; 
+			z-index: 999999;
+			display:none;
+			justify-content:center;
+			align-items:center;
+        }
+    </style>
+</head>
+
+<body>
+
+	<!-- 加载动画 -->
+    <div class="" id="load-dh">
+        <div class="spinner" style="margin: 0 auto;">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- 加载动画结束 -->
+
+    
+
+    <div id="bg" class="login" style="display: block;">
+        <p id="notice" class="alert hide"></p>
+        <form id="thisForm">
+            <h2>广西科技大学成绩查询</h2>
+            <input id="user" name="studentid" type="text" placeholder="学号" required autofocus>
+            <input id="passwd" name="password" type="password" placeholder="密码（一般为身份证后8位）" required>
+            <button id="submit">查 询</button>
+        </form>
+    </div>
+
+
+    <div id="mark" class="mark-body" style="display: none;">
+        <div class="info">
+            <span id="studentname" class="name">dfdsfds</span>
+            <span id="studentpoint" class="point">7.50</span>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="th-trem">N</th>
+                    <th class="th-course-name">课程名称</th>
+                    <th class="th-category">类别</th>
+                    <th class="th-credit">学分</th>
+                    <th class="th-daily-mark">平时</th>
+                    <th class="th-midterm-mark">期中</th>
+                    <th class="th-exam-mark">期末</th>
+                    <th class="th-final-mark">总评成绩</th>
+                    <th class="th-exam-nature">考试性质</th>
+                    <th class="th-mark-point">绩点</th>
+                    <th class="th-course-code">课程代码</th>
+                    <th class="th-class-hour">学时</th>
+                </tr>
+            </thead>
+            <tbody id="chengji-body">
+<!--                 <tr>
+                    <th class="th-trem">1</th>
+                    <th class="th-course-name">电工电子基础</th>
+                    <th class="th-category">通识必修</th>
+                    <th class="th-credit">3.00</th>
+                    <th class="th-daily-mark">90.00</th>
+                    <th class="th-midterm-mark">0.00</th>
+                    <th class="th-exam-mark">42.00</th>
+                    <th class="th-final-mark">56</th>
+                    <th class="th-exam-nature">期末考试</th>
+                    <th class="th-mark-point"></th>
+                    <th class="th-course-code">DK031531</th>
+                    <th class="th-class-hour">48.00</th>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/mark.js"></script>
+
+</html>

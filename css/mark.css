@@ -1,0 +1,252 @@
+html,
+body {
+    background: linear-gradient(45deg, #211136, #bf5853);
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+form {
+    max-width: 330px;
+    margin: 0 auto;
+    padding: 45px 15px 15px 15px;
+}
+
+form h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+form input:focus {
+    border: 1px solid #2e6da4;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="text"] {
+    margin-bottom: 10px;
+}
+
+form input[type="password"] {
+    margin-bottom: 30px;
+}
+
+form button {
+
+    width: 100%;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.9;
+    border: 1px solid transparent;
+}
+
+
+/*mark-body*/
+.mark-body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, #211136, #bf5853);
+}
+
+.info {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, .22) inset;
+    font-weight: 100;
+    display: block;
+}
+
+.info .point {
+    padding-left: 30px;
+}
+
+.table {
+    width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+th::-webkit-scrollbar {
+    display: none;
+}
+
+.table tr th {
+    overflow-y: hidden;
+    padding: 10px;
+}
+
+.table thead tr th {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    border-left: none;
+    border-top: none;
+    color: #fff;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+.table tbody tr th {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-left: none;
+    border-top: none;
+    color: #fff;
+    font-weight: 100;
+}
+
+@media screen and (max-width:560px) {
+    .info {
+        display: none;
+    }
+
+    .th-midterm-mark,
+    .th-credit,
+    .th-course-code,
+    .th-category,
+    .th-exam-nature,
+    .th-class-hour {
+        display: none;
+    }
+
+    .th-course-name {
+        width: 28%;
+    }
+
+    .th-trem {
+        width: 9%;
+    }
+
+    .th-daily-mark,
+    .th-mark-point,
+    .th-exam-mark {
+        width: 15%;
+    }
+
+    .th-final-mark {
+        width: 18%;
+    }
+
+    th {
+        padding: 0 3px !important;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        line-height: 45px;
+        height: 45px;
+        font-size: 13px;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+
+
+/* 加载动画 */
+.spinner {
+    /*margin: 100px auto;*/
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner>div {
+    background-color: #bf5853;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+
+    20% {
+        -webkit-transform: scaleY(1.0) background-color: #211136;
+    }
+}
+
+@keyframes stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+        background-color: #211136;
+    }
+}
+
+/* 动画结束 */
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
